@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block body %}
-
-    <h1>All Pages</h1>
+    
+    <h2>No exact matches for "{{ entryTitle }}"; the following entries are pretty close:</h2>
 
     <ul>
-        {% for entry in entries %}
+        {% for entry in closeMatch %}
             <a href="/wiki/{{ entry }}"><li>{{ entry }}</li></a>
         {% endfor %}
     </ul>
