@@ -7,9 +7,7 @@
 {% block body %}
     {{ entry|safe }}
 
-    <form action="{% url 'edit' %}" method="POST">
-        {% csrf_token %}
-        <input type="hidden" name="entryTitle" value="{{ entryTitle }}">
+    <form action="{% url 'edit' entryTitle%}" method="GET">
         <input type="submit" value="Update Contents" class="btn btn-outline-secondary">
     </form>
 
